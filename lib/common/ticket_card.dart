@@ -13,7 +13,7 @@ class TicketCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 210.0,
+      height: 240.0,
       padding: showQR
           ? const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0)
           : const EdgeInsets.all(0.0),
@@ -28,7 +28,7 @@ class TicketCardWidget extends StatelessWidget {
           },
           child: Container(
             margin: const EdgeInsets.all(16.0),
-            child: ListView(
+            child: Row(
               children: <Widget>[
                 Expanded(
                   child: Column(
@@ -54,18 +54,19 @@ class TicketCardWidget extends StatelessWidget {
                         height: 0.5,
                         color: Colors.white,
                       ),
-                       SizedBox(width: 1.0),
-                        Padding(
-                  padding: const EdgeInsets.all(1.0),
-                  child: Image.asset("images/qrcode.png",
-                  width: 40,
-                  height: 40,
-                          color: Colors.white,)
-                ),
+                      SizedBox(width: 1.0),
+                      Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: Image.asset(
+                            "images/qrcode.png",
+                            width: 40,
+                            height: 40,
+                            color: Colors.white,
+                          )),
                       AirportDetailWidget(
                         harga: ticket.harga,
                         transaksi: ticket.transaksi,
-                      ),   
+                      ),
                     ],
                   ),
                 ),
@@ -75,8 +76,5 @@ class TicketCardWidget extends StatelessWidget {
         ),
       ),
     );
-     
   }
 }
-
- 

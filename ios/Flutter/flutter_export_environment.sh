@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
 export "FLUTTER_ROOT=C:\Users\INTRACS-JLJ\flutter"
-export "FLUTTER_APPLICATION_PATH=D:\projectweb\coworking space"
+export "FLUTTER_APPLICATION_PATH=D:\projectweb\mobileworking"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib\main.dart"
 export "FLUTTER_BUILD_DIR=build"

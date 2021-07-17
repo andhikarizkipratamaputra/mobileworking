@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:coworking_space/restapi/datameja.dart';
 import 'package:http/http.dart' as http;
 
 class DataMeja {
