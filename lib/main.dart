@@ -1,4 +1,5 @@
 import 'package:coworking_space/ScanQr.dart';
+import 'package:coworking_space/login/loginpage.dart';
 import 'package:coworking_space/lupaemail.dart';
 import 'package:coworking_space/restapi/apimain.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,8 @@ class MyApp extends StatelessWidget {
     RegistrasiPage.tag: (context) => RegistrasiPage(),
     ScanQrPage.tag: (context) => ScanQrPage(),
     Lupaemail.tag: (context) => Lupaemail(),
+    Newlogin.tag: (context) => Newlogin(),
+    MyApi.tag: (context) => MyApi(),
   };
 
   @override
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
         primaryColor: primaryColor,
         fontFamily: 'Nunito',
       ),
-      home: HomePage(),
+      home: Newlogin(),
       routes: routes,
     );
   }
