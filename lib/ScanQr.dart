@@ -1,19 +1,16 @@
-
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/services.dart';
 
-
-
 class ScanQrPage extends StatefulWidget {
-  static String tag ='ScanQr-page';
+  static String tag = 'ScanQr-page';
   @override
   _ScanQrPageState createState() => _ScanQrPageState();
 }
 
 class _ScanQrPageState extends State<ScanQrPage> {
-   String result = "Klik Kamera untuk Scan !";
+  String result = "Klik Kamera untuk Scan !";
 
   Future _scanQR() async {
     try {
@@ -52,12 +49,13 @@ class _ScanQrPageState extends State<ScanQrPage> {
         padding: EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children:<Widget> [
+          children: <Widget>[
             Image.asset('images/qrcode.png'),
             Center(
               child: Text(
                 result,
-                style: new TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+                style:
+                    new TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
               ),
             ),
           ],

@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         primaryColor: primaryColor,
         fontFamily: 'Nunito',
       ),
-      home: Newlogin(),
+      home: MyApi(),
       routes: routes,
     );
   }

@@ -1,5 +1,8 @@
+import 'package:coworking_space/ScanQr.dart';
 import 'package:coworking_space/restapi/user_model.dart';
 import 'package:flutter/material.dart';
+import 'package:barcode_scan/barcode_scan.dart';
+import 'package:flutter/services.dart';
 
 class MyApi extends StatefulWidget {
   static String tag = "apimain-tag";
@@ -8,8 +11,7 @@ class MyApi extends StatefulWidget {
 }
 
 class _MyApiState extends State<MyApi> {
-  DataMeja dataMeja = null;
-
+  PostResult postResult = null;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,29 +23,30 @@ class _MyApiState extends State<MyApi> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Text((dataMeja != null)
-                  ? dataMeja.id +
+              Text((postResult != null)
+                  ? postResult.id +
                       "|" +
-                      dataMeja.kdmeja +
+                      postResult.nomermeja +
                       "|" +
-                      dataMeja.hargasewa +
+                      postResult.hargasewa +
                       "|" +
-                      dataMeja.kapasitas +
+                      postResult.kodemeja +
                       "|" +
-                      dataMeja.fasilitas +
+                      postResult.fasilitas +
                       "|" +
-                      dataMeja.statussewa +
-                      "|" +
-                      dataMeja.kodemeja
+                      postResult.kapasitas
                   : "tidak ada data"),
               ElevatedButton(
                 onPressed: () {
-                  DataMeja.connectToAPI("8").then((value) {
-                    dataMeja = value;
+                  PostResult.connectToAPI("A1", "20000", "ACSVASKW",
+                          "AC,WIFI,PRINTER", "6 Orang")
+                      .then((value) {
+                    postResult = value;
                     setState(() {});
                   });
+                  Navigator.of(context).pushNamed(ScanQrPage.tag);
                 },
-                child: Text("GET"),
+                child: Text("Proses Scan"),
               )
             ],
           ),

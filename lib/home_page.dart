@@ -14,12 +14,12 @@ class HomePage extends StatelessWidget {
     ticket.id = "1";
     ticket.sewa = "Sewa";
     ticket.email = "Andhika@Gmail.com";
-    ticket.waktusewa = "15:00";
+    ticket.waktusewa = "13:00";
     ticket.selesai = "Selesai";
     ticket.tempatSewa = "Jakarta";
-    ticket.selesaisewa = "07:00";
-    ticket.harga = "Rp.300.000";
-    ticket.transaksi = "Transfer";
+    ticket.selesaisewa = "14:00";
+    ticket.harga = "Rp.20.000";
+    ticket.transaksi = "Bayar Ditempat";
 
     return Scaffold(
       backgroundColor: Colors.white,

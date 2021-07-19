@@ -56,13 +56,14 @@ class TicketCardWidget extends StatelessWidget {
                       ),
                       SizedBox(width: 1.0),
                       Padding(
-                          padding: const EdgeInsets.all(1.0),
-                          child: Image.asset(
-                            "images/qrcode.png",
-                            width: 40,
-                            height: 40,
-                            color: Colors.white,
-                          )),
+                        padding: const EdgeInsets.all(1.0),
+                        child: Image.asset(
+                          "images/qrcode.png",
+                          width: 40,
+                          height: 40,
+                          color: Colors.white,
+                        ),
+                      ),
                       AirportDetailWidget(
                         harga: ticket.harga,
                         transaksi: ticket.transaksi,
